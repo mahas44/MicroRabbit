@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace MicroRabbit.Banking.Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class BankingController : ControllerBase
     {
 
@@ -21,7 +21,7 @@ namespace MicroRabbit.Banking.Api.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Account>> Get()
         {
-            return Ok(_accountService.GetAccount());
+            return Ok(_accountService.GetAccounts());
         }
 
         [HttpPost]
